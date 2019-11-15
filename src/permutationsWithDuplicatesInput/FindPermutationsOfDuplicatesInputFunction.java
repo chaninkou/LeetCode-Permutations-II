@@ -8,9 +8,10 @@ public class FindPermutationsOfDuplicatesInputFunction {
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> finalList = new ArrayList<>();
         
-        // Need to be sorted or else checking will not work
+        // Need to be sorted or else checking if statement boolean will not work
         Arrays.sort(nums);
         
+        // boolean array will be size of nums
         backtrack(finalList, new ArrayList<>(), nums, new boolean[nums.length]);
         
         return finalList;
