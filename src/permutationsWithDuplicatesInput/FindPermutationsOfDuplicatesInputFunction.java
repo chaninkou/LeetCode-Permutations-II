@@ -26,7 +26,7 @@ public class FindPermutationsOfDuplicatesInputFunction {
         } else {
             for(int i = 0; i < nums.length; i++){
                 // used[i] is too check if the element of that index is already inserted to tempList, 
-            	// i > 0 && nums[i] == nums[i - 1] && !used[i - 1] happen when the two element are the same of each others, !used[i - 1] made sure that it is not true
+            	// !used[i-1] means the previous element was already done, thats why it got resetted back to false
                 if(used[i] || (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])){
                     continue; 
                 }
